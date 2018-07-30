@@ -1,8 +1,6 @@
 'use strict';
 
-var mainNavToggle = document.querySelector(".navigation__toggle"),
-	mainNav = document.querySelector(".navigation"),
-	featuresSliderToggle1 = document.querySelector(".features .slider__toggle:nth-child(1)"),
+var featuresSliderToggle1 = document.querySelector(".features .slider__toggle:nth-child(1)"),
 	featuresSliderToggle2 = document.querySelector(".features .slider__toggle:nth-child(2)"),
 	featuresSliderToggle3 = document.querySelector(".features .slider__toggle:nth-child(3)"),
 	featuresSlider = document.querySelector(".features__list"),
@@ -12,17 +10,6 @@ var mainNavToggle = document.querySelector(".navigation__toggle"),
 	reviewsSlider = document.querySelector(".reviews__list"),
 	sliderPrevButton = document.querySelector(".slider__prev"),
 	sliderNextButton = document.querySelector(".slider__next");
-
-mainNavToggle.addEventListener("click", function(event) {
-	event.preventDefault();
-	if (mainNav.classList.contains("navigation--closed")) {
-		mainNav.classList.remove("navigation--closed");
-		mainNav.classList.add("navigation--opened");
-	} else {
-		mainNav.classList.remove("navigation--opened");
-		mainNav.classList.add("navigation--closed");
-	}
-});
 
 
 featuresSliderToggle1.addEventListener("click", function(event) {
@@ -302,6 +289,3 @@ class Slider {
 
 let slider = new Slider();
 slider.swipes();
-
-
-
